@@ -4,6 +4,7 @@ import HeroSection from "./sections/HeroSection";
 import Destinations from "./sections/Destinations";
 import Journey from "./sections/Journey";
 import Header from "./sections/Header";
+import BookNow from "./sections/BookNow";
 
 function App() {
   const [darkMode, setDarkMode] = React.useState(false);
@@ -16,6 +17,13 @@ function App() {
     }
   }, [darkMode]);
 
+  const scrollToBookSection = () => {
+    const bookSection = document.getElementById("book");
+    if (bookSection) {
+      bookSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-bg dark:bg-dark-five text-primary dark:text-dark-primary font-sans">
       <Header
@@ -25,22 +33,36 @@ function App() {
 
       <main className="p-44">
         <section id="hero">
-          <HeroSection />
+          <HeroSection onBookClick={scrollToBookSection} />
         </section>
         <section id="destinations">
-          <Destinations />
+          <Destinations onBookClick={scrollToBookSection} />
         </section>
         <section id="journey">
           <Journey />
         </section>
+        <div id="divisor" className="w-[50%] h-0.5 bg-black/40 m-auto mt-20" />
         <section id="book">
-          <div className="text-center py-40 text-h2 font-bold">
-            [Componente Agendar Aqui]
-          </div>
+          <BookNow />
         </section>
       </main>
+
+      <footer className="text-center h-20">
+        <p className="text-sm text-gray-600">
+          @Desenvolvido por{" "}
+          <a
+            href="https://www.linkedin.com/in/julyana-gusmao/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            Julyana Gusmão
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
+
 
 export default App;

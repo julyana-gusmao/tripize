@@ -1,7 +1,11 @@
 import PrimaryButton from "../components/PrimaryButton";
 import { destinations } from "../data/destinations";
 
-const Destinations = () => {
+interface DestinationsProps {
+  onBookClick: () => void;
+}
+
+const Destinations: React.FC<DestinationsProps> = ({ onBookClick }) => {
   return (
     <section className="py-12 px-6 text-dark text-text">
       <h2 className="text-h2 font-extrabold mb-8 dark:text-white">
@@ -26,12 +30,11 @@ const Destinations = () => {
               <p className="text-base font-regular text-gray-700 mb-4 dark:text-dark-secondary">
                 {dest.description}
               </p>
-              <PrimaryButton text="Agendar Agora" />
+              <PrimaryButton text="Agendar Agora" onClick={onBookClick} />
             </div>
           </div>
         ))}
       </div>
-      
     </section>
   );
 };
