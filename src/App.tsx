@@ -31,7 +31,7 @@ function App() {
         toggleDarkMode={() => setDarkMode(!darkMode)}
       />
 
-      <main className="p-44">
+      <main className="lg:p-44">
         <section id="hero">
           <HeroSection onBookClick={scrollToBookSection} />
         </section>
