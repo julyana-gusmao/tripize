@@ -157,7 +157,7 @@ const BookNow: React.FC = () => {
           <img
             src={backpacker}
             alt="Backpacker"
-            className="w-[90%] bg-cover bg-center"
+            className="hidden lg:block w-[90%] bg-cover bg-center"
           />
         </div>
       </div>

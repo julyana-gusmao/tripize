@@ -7,7 +7,7 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ onBookClick }) => {
   return (
-    <section className="relative w-full h-[500px] sm:h-[650px] md:h-[800px] flex items-center justify-center rounded-xl overflow-hidden">
+    <section className="relative w-full h-[500px] sm:h-[600px] md:h-[800px] flex items-center justify-center md:rounded-xl overflow-hidden">
       <img
         src={heroImage}
         alt="Paris"
