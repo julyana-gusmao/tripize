@@ -5,6 +5,10 @@
 A aplicação está publicada via **Vercel** e pode ser acessada aqui:  
 ### 🔗 [tripize.vercel.app](https://tripize.vercel.app)
 
+----
+
+Caso queira testar em modo desenvolvimento, **yarn install e yarn start**!
+
 ---
 
 ## ✨ Destaques
